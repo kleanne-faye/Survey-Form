@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/icons/survicon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/material-design-iconic-font.min.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/survey-css.css">
+
+</head>
+<body>
+
+    <div class="container-survey100">
+        <div class="survey100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+
+          <div class="wrap-contact100">
+            <form class="contact100-form validate-form">
+            </form>
+
+        <div class="container">
+            <header class="header">
+                <h1 id="title" class="text-center">Online Dating Survey Form</h1><br>
+                <p id="description" class="description text-left">
+                    Greetings!<br>We, the researchers of the Survey Form Institution are conducting a research regarding the preference of people in Online Dating. In line with this, we would like to seek your participation by answering the following questions honestly. Rest assured that your answers will be kept confidential.<br>Hoping for your cooperation.<br>Thank you very much!</p><br><hr><br>
+            </header>
+
+            <form id="survey-form">
+               <!-- <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required="">
+                </div>-->
+                <label id="name-label" for="name"><strong>Name</strong></label><br>
+                 <div class="wrap-input100 validate-input" data-validate="Please enter your name:">
+                    <input class="input100" type="text" id="name" placeholder="Enter your name" required="">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label id="email-label" for="email"><strong>Email</strong></label><br>
+                <div class="wrap-input100 validate-input" data-validate = "Please enter email: e@a.x">
+                    <input class="input100" type="email" id="email" placeholder="Enter your email" required="">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <label id="age-label" for="number"><strong>Age</strong></label><br>
+                <div class="wrap-input100 validate-input" data-validate = "Please enter your age:">
+                    <input class="input100" type="number" id="number" min="18" max="99" placeholder="Age" required=" ">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="form-group">
+                    <p><strong>Gender</strong></p>
+                    <label>
+                        <input name="user-recommend" value="Male" type="radio" class="input-radio" checked="">
+                        Male<br>
+                    </label>
+                    <label>
+                        <input name="user-recommend" value="Female" type="radio" class="input-radio" checked="">
+                        Female<br>
+                    </label>
+                    <label>
+                        <input name="user-recommend" value="Others" type="radio" class="input-radio" checked="">
+                        Others
+                    </label>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <br>
+                <label id="site-label" for="site"><strong>Which online dating site or application do you use most often?</strong></label><br>
+                <div class="wrap-input100 validate-input" data-validate = "Please enter site or application">
+                    <input class="input100" type="text" id="site" placeholder="Type your answer" required=" ">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <br>
+
+                 <label id="hours-label" for="hours"><strong>In a typical week, how much of your time do you 
+                 spend in online dating site or apllication?</strong></label><br>
+                 <div class="wrap-input100 validate-input" data-validate = "Please enter your age:">
+                    <select id="dropdown" name="time" class="input100" required>
+                        <option disabled selected value=>Please select</option>
+                        <option value="less">Less than hours</option>
+                        <option value="two">2-5 hours</option>
+                        <option value="six">6-10 hours</option>
+                        <option value="eleven">11-15 hours</option>
+                        <option value="over">Over 15 hours</option>
+                    </select>
+                 <span class="focus-input100"></span>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <p><strong>What kind of relationship are you looking for when surfing on the dating website or app?</strong>
+                    <span class="clue">(Check all that apply)</span>
+                    </p>
+                    <label>
+                        <input type="checkbox" name="prefer" value="lasting-relationship" class="input-checkbox">
+                        Looking for lasting relationship<br>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="prefer" value="looking-for-friendship" class="input-checkbox">
+                        Looking for friendship<br>
+                    </label> 
+
+                    <label>
+                        <input type="checkbox" name="prefer" value="looking-for-hookups" class="input-checkbox">
+                        Looking for hookups<br>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="prefer" value="looking-talk" class="input-checkbox">
+                        Looking for someone to talk to<br>
+                    </label>
+                </div>
+
+                <br>
+
+                <label id="comment-label" for="comment"><strong>Any additional thoughts or comments you want to make about online dating?</strong></label><br>
+                <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+                    <textarea class="input100" name="message" id="comments" placeholder="Type here..."></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn" type="submit" id="submit">
+                        <stong>Submit</stong>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div id="dropDownSelect1"></div>
+
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="vendor/select2/select2.min.js"></script>
+
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+    <script src="js/map-custom.js"></script>
+
+    <script src="js/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
